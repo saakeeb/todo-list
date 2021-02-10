@@ -1,5 +1,15 @@
-h3{
-    
-  border: 1px solid gainsboro;
-  margin: 5px 100px;
+.todo-style{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.todo-task{
+  margin: 3px auto;
+  display: flex;
+
+}
+.todo-task h3{
+  padding: 0 5px;
+  margin-left: 50px;
 }

@@ -13,7 +13,7 @@ const TodoForm = ({addToDo, value, setValue}) => {
     console.log(value)
 
     const submitButton = {
-        marginTop: '5px'
+        marginTop: '15px'
     }
 
     return (

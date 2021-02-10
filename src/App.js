@@ -6,6 +6,7 @@ import TodoForm from './Component/TodoForm/TodoForm';
 
 function App() {
   const [value, setValue] = useState('');
+
   const [todos, setTodos] = useState([
     { text: 'Wake up in the morning', isCompleted: false },
     { text: 'Pray my morning Salat', isCompleted: false },
@@ -17,18 +18,23 @@ function App() {
     setTodos(newToDo);
   }
 
-  const refactor = ()=>{
-
-  }
-  const completeToDo = index =>{
+  const refactor = (index, redirect)=>{
     const newToDo = [...todos];
-    newToDo[index].isCompleted = true;
+    if(redirect){
+      newToDo[index].isCompleted = true;
+    }
+    else{
+      newToDo[index].isCompleted = false;
+    }
+    
     setTodos(newToDo);
+  }
+  
+  const completeToDo = index =>{
+    refactor(index, true);
   }
   const inCompleteToDo = index =>{
-    const newToDo = [...todos];
-    newToDo[index].isCompleted = false;
-    setTodos(newToDo);
+    refactor(index, false);
   }
   const removeToDo = index =>{
     const newToDo = [...todos];
