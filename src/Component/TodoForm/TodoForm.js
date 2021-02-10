@@ -10,7 +10,6 @@ const TodoForm = ({addToDo, value, setValue}) => {
         e.target.reset();
 
     }
-    console.log(value)
 
     const submitButton = {
         marginTop: '15px'

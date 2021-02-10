@@ -3,7 +3,6 @@ import './Todo.css'
 
 const Todo = ({ todo, index, completeToDo, inCompleteToDo, removeToDo }) => {
     const time = new Date().toLocaleString();
-    console.log(time);
     return (
         <div className="todo-style">
             <div className="todo-task">
